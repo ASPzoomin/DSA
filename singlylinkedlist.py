@@ -5,7 +5,7 @@ class Node:
 class Linkedlist:
     def __init__(self):
         self.head=None
-    def insert(self,newnode):
+    def insertend(self,newnode):
         if self.head is None:
             self.head=newnode
         else:
@@ -24,13 +24,13 @@ class Linkedlist:
             currentnode=currentnode.next
 firstnode=Node("pavan")
 linkedlist=Linkedlist()
-linkedlist.insert(firstnode)
+linkedlist.insertend(firstnode)
 secondnode=Node("lakshmipriya")
-linkedlist.insert(secondnode)
+linkedlist.insertend(secondnode)
 thirdnode=Node("sreekar")
-linkedlist.insert(thirdnode)
+linkedlist.insertend(thirdnode)
 fourthnode=Node("supriya")
-linkedlist.insert(fourthnode)
+linkedlist.insertend(fourthnode)
 linkedlist.print()
 
 
