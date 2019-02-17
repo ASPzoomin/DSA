@@ -11,6 +11,9 @@ class Linkedlist:
         self.head.next=tempnode
         del tempnode
     def positionat(self,newnode,position):
+        if position is 0:
+            self.inserthead(newnode)
+            return
         currentposition=0
         currentnode=self.head
         while True:
@@ -49,5 +52,5 @@ linkedlist.insertend(thirdnode)
 fourthnode=Node("supriya")
 linkedlist.insertend(fourthnode)
 fifthnode=Node("Anish")
-linkedlist.positionat(fifthnode,2)
+linkedlist.positionat(fifthnode,0)
 linkedlist.print()
