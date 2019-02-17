@@ -22,7 +22,7 @@ class Linkedlist:
                 break
             print(currentnode.data)
             currentnode=currentnode.next
-firstnode=Node("pavann")
+firstnode=Node("pavan")
 linkedlist=Linkedlist()
 linkedlist.insert(firstnode)
 secondnode=Node("lakshmipriya")
