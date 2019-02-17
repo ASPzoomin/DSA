@@ -5,6 +5,11 @@ class Node:
 class Linkedlist:
     def __init__(self):
         self.head=None
+    def inserthead(self,newnode):
+        tempnode=self.head
+        self.head=newnode
+        self.head.next=tempnode
+        del tempnode
     def insertend(self,newnode):
         if self.head is None:
             self.head=newnode
@@ -31,6 +36,8 @@ thirdnode=Node("sreekar")
 linkedlist.insertend(thirdnode)
 fourthnode=Node("supriya")
 linkedlist.insertend(fourthnode)
+fifthnode=Node("Anish")
+linkedlist.inserthead(fifthnode)
 linkedlist.print()
 
 
