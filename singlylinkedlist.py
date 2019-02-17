@@ -5,12 +5,24 @@ class Node:
 class Linkedlist:
     def __init__(self):
         self.head=None
+    def listlength(self):
+        length=0
+        currentnode=self.head
+        while True:
+            if currentnode is None:
+                break
+            currentnode=currentnode.next
+            length+=1
+            return length
     def inserthead(self,newnode):
         tempnode=self.head
         self.head=newnode
         self.head.next=tempnode
         del tempnode
     def positionat(self,newnode,position):
+        if position<0 or position >self.listlength():
+            print("Invalid position")
+            return
         if position is 0:
             self.inserthead(newnode)
             return
@@ -35,6 +47,16 @@ class Linkedlist:
                     break
                 lastnode=lastnode.next
             lastnode.next=newnode
+    def deleteend(self,newnode):
+        currentnode=self.head
+        while True:
+
+            if currentnode is None:
+                previousnode.next=None
+                break
+            else:
+                previousnode=currentnode
+                currentnode=currentnode.next    
     def print(self):
         currentnode=self.head
         while True:
@@ -52,5 +74,7 @@ linkedlist.insertend(thirdnode)
 fourthnode=Node("supriya")
 linkedlist.insertend(fourthnode)
 fifthnode=Node("Anish")
-linkedlist.positionat(fifthnode,0)
+linkedlist.positionat(fifthnode,1)
+sixthnode=Node("jasmine")
+linkedlist.deleteend(sixthnode)
 linkedlist.print()
