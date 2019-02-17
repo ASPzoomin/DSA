@@ -29,6 +29,8 @@ secondnode=Node("lakshmipriya")
 linkedlist.insert(secondnode)
 thirdnode=Node("sreekar")
 linkedlist.insert(thirdnode)
+fourthnode=Node("supriya")
+linkedlist.insert(fourthnode)
 linkedlist.print()
 
 
